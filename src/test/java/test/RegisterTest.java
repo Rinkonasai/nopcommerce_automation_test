@@ -18,15 +18,18 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test
-    public void Register(){
+    public void Register() throws InterruptedException {
         RegisterPage registerPage = new RegisterPage(driver);
 
         registerPage.enterDetails(
                 "John",
                 "Salon",
-                "Johnsalon@gmail.com"
+                "Johnsalon@gmail.com",
+                "123456",
+                "123456"
         );
 
+        registerPage.submitRegistrationError();
 
         Assert.assertTrue(registerPage.isErrorMessageDisplayed(), "Error message should be displayed for invalid registration data");
     }
