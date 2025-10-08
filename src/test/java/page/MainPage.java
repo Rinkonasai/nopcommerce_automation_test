@@ -6,10 +6,11 @@ import org.openqa.selenium.WebDriver;
 
 public class MainPage extends BasePage {
 
-    private By navigateToRegister = By.className("ico-register");
-    private By navigateToLogin = By.className("ico-login");
-    private By navigateToWishlist = By.className("ico-wishlist");
-    private By navigateToShoppingcart = By.className("ico-cart");
+    protected By navigateToRegister = By.className("ico-register");
+    protected By navigateToLogin = By.className("ico-login");
+    protected By navigateToWishlist = By.className("ico-wishlist");
+    protected By navigateToShoppingcart = By.className("ico-cart");
+
 
     public MainPage(WebDriver driver) {
         super(driver);
@@ -34,4 +35,7 @@ public class MainPage extends BasePage {
         click(navigateToWishlist);
         return new WishlistPage(driver);
     }
+
+
+
 }
