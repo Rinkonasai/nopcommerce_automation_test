@@ -16,11 +16,11 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
     protected void click(By locator){
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+                                                        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
     protected void sendKeys(By locator, String text){
